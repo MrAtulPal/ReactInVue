@@ -1,25 +1,32 @@
-# React component in Vue App using module federation.
-* The concept of Micro Frontend Architecture used in this small project.
-* The module federation is new plugin introduced in webpack 5.
-* React app is remote it exposes the `App.js`.
-* Vue App is host application it remotes `the React component`.
+# React component in Vue app using Module Federation Webpack
 
-# # How to run
-* ```
-    cd react_app 
-    npm i
-    npm start 
-    ``` 
-* ```
-    cd  vue_app 
-    npm i
-    npm start 
-    ``` 
+## Intro
+![ReactInVue](https://www.britwise.com/blog/wp-content/uploads/2019/09/vue-vs-react.png)
 
-# # Version
-* Vue js `version 3`.
-* React js `version 18`.
+I'm working as an intern under a product based organization where they uses Micro-frontend architecture in their Applications. One day, they ask me to take initiative to make React app and use react components in the exisiting applications.
 
-# # Note
-* both app is made using their cli's
-* in react you can't write custom webpack, therefore i have use react-app-rewired you can also use CROC, eject, etc.
+## Challenges and solution
+
+* Build React app using [React CRA](https://create-react-app.dev/).
+
+    You can't directly overwrite webpack configs in react. Therefore,I have used [react-app-rewired](https://www.npmjs.com/package/react-app-rewired) or you can use `react-eject`,etc.
+
+* Build Vue app using [Vue CLI](https://cli.vuejs.org/).
+
+## Remote and Host app
+Here React App is remote App and Vue App is host app.
+
+## How to run
+You have to run both app seprately.
+* Run react app
+```bash
+cd react_app
+npm i
+npm run start
+```
+* Run vue app
+```bash
+cd vue_app
+npm i
+npm run serve
+```
